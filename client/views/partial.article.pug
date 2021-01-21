@@ -1,0 +1,54 @@
+//- Title
+section.section-title
+  include mixin.title.pug
+  +title(title)
+
+//- Neck
+section.section-neck
+  include mixin.neck.pug
+  +neck(readingTimeText, author,  revisionDate, tags)
+
+//- Summary
+section.section-summary
+  include mixin.conclusion.pug
+  +conclusion(conclusion)
+
+//- Article content
+section.section-content
+  p #{fileName}
+  case fileName
+    when 'the-40-min-rule'
+      include:markdown-it articles/the-40-min-rule.md
+    when 'how-to-manage-a-technical-debt'
+      include:markdown-it articles/how-to-manage-a-technical-debt.md
+    when 'is-ie-a-business-in-2020'
+      include:markdown-it articles/is-ie-a-business-in-2020.md
+    when 'choosing-a-correct-branching-model'
+      include:markdown-it articles/choosing-a-correct-branching-model.md
+    when 'what-about-estimations'
+      include:markdown-it articles/what-about-estimations.md
+    when 'what-about-task-splitting'
+      include:markdown-it articles/what-about-task-splitting.md
+//- @NewArticleHere
+
+//- Conclusion
+section
+  h2 Conclusion
+  p #{conclusion}
+
+//- Vote
+section.vote
+  include mixin.vote.pug
+  +vote
+
+//- Continue reading
+include mixin.list.pug
+section.read-more
+  .row
+    .col.continue-reading
+      +list('Continue reading', continueReading)
+    .col.related-articles
+      +list('Related articles', relatedArticles)
+
+section.discuss
+  div#disqus_thread

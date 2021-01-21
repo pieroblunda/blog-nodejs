@@ -1,0 +1,25 @@
+// out: ../../public/css/main.css
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap')
+@import "framework.variables"
+@import "framework.base"
+@import "framework.grid"
+@import 'partial.menu'
+@import 'partial.footer'
+@import 'partial.article'
+
+article
+  &.container
+    .item-result-container
+      &:not(:last-child)
+        padding-bottom 1.3rem
+        border-bottom 1px solid #cecece
+        margin-bottom 1.3rem
+      a
+        display block
+        margin-bottom 1rem
+      p
+        font-size 80%
+        line-height normal
+        margin-bottom .5rem
+        &.author
+          margin-bottom 0

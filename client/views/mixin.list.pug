@@ -1,0 +1,6 @@
+mixin list(title, items)
+  h2 #{title}
+  ul
+    for item in items
+      li 
+        a.badge(href=`${item.link}` target="_blank") #{item.text}

@@ -1,0 +1,39 @@
+// main: main.styl, out: ../../public/css/partial-footer.css
+footer
+  background-color #c6c6c66e
+  color #333
+  .wrapper
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    max-width 860px
+    margin 0 auto
+    h2
+      margin-top 0
+  section
+    flex 0 1 auto
+    min-width: 150px
+    &[data-section-name="general"]
+      padding 60px 0
+      h2
+        margin-bottom 12px
+      a
+        color inherit
+        font-size 14px
+        line-height 18px
+    &[data-section-name="legal-info"]
+      background-color #333
+      color #fff
+      font-size 70%
+      ul
+        display flex
+        flex-wrap wrap
+        li
+          padding 10px 15px
+          flex-basis 100%
+          &:first-child
+            flex 1 0
+          a
+            color inherit
+          @media screen and (min-width: 1024px)
+            flex-basis auto

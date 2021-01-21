@@ -1,0 +1,11 @@
+node_modules
+mongod.bat
+client/constants/dictionary.js
+*.log
+*.css
+*.directory
+coverage
+**/node_modules
+*.DS_Store
+*.env
+email-marketing.csv

@@ -1,0 +1,16 @@
+mixin neck(readingTimeText, author, revisionDate, tags)
+  ul
+    li
+      em #{readingTimeText}
+    li
+      em By&nbsp;
+        case author
+          when 'pieroblunda'
+            a(href="https://github.com/pieroblunda") Piero Blunda
+          when 'juanpelota'
+            a(href="https://github.com/juanpelota") Juan Pelota
+        |&nbsp;on #{revisionDate}
+    li
+      for tag in tags
+        //-a.badge(href=`/tag/${tag}`) # #{tag}
+        .badge # #{tag}

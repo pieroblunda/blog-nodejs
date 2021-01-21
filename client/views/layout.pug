@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-158637677-1")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-158637677-1');
+  
+    meta(charset="utf-8")
+    meta(name="Description" content="Put your description here.")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel="stylesheet" type="text/css" href="/css/main.css")
+    title pb-Blog
+  body
+    include partial.menu.pug
+    main
+      article.container
+        case view
+          when 'why'
+            include partial.why.pug
+          when 'about'
+            include partial.about.pug
+          when 'recent'
+            include partial.searchResult.pug
+          when 'searchResult'
+            include partial.searchResult.pug
+          when 'article'
+            include partial.article.pug
+    
+    include partial.footer.pug
+
+    include scripts.pug

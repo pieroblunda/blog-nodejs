@@ -1,0 +1,38 @@
+// main: main.styl, out: ../../public/css/partial-menu.css
+nav
+	display flex
+	justify-content center
+	align-items stretch
+	height $navbar-height
+	background-color $navbar-background
+	@media screen and (min-width: 1024px)
+		top 0
+		position sticky
+.nav-btn
+	height 100%
+	color white
+	padding 0 $margin-standard
+	font-size 14px
+	line-height 60px
+	&:hover
+		text-decoration none
+		background-color #525252
+	small
+		margin-left 5px
+.btn-dropdown-container:hover
+	.second-navbar
+		display flex
+.second-navbar
+	display none
+	position absolute
+	background-color #ccc
+	justify-content center
+	width 100%
+	left 0
+.second-navbar-column
+	padding 10px 50px
+.second-navbar-btn
+		display block
+	  height auto
+	  width 100%
+		padding 0
